@@ -16,10 +16,10 @@ programa
 		escreva("Selecione o idioma desejado para concluir a operação (inglês / português): \n")
 		escreva("Select the desired language to complete the operation (English / Portuguese):\n\n ")
 		leia(lingua) limpa()
-		valorLi = text.caixa_alta(text.extrair_subtexto(lingua, 0, 1))
+		valorLi = text.caixa_alta(text.extrair_subtexto(lingua, 0, 2))
 	faca
 	{
-		se (valorLi == "P")
+		se (valorLi == "PO" ou valorLi == "PT")
 		{
 	
 			//ele pede o valor da conta
@@ -144,7 +144,7 @@ programa
 		enquanto(S == "S" ou S == "Y")
 			}
 		}
-		senao se (valorLi == "I" ou valorLi == "E")
+		senao se (valorLi == "IN" ou valorLi == "EN")
 				{
 	
 			//ele pede o valor da conta
@@ -274,10 +274,10 @@ programa
 			escreva("Idioma inválido, insira um idioma disponível (Inglês/Português) ou cancele: \n")
 			escreva("Invalid language, please enter an available language (English / Portuguese) or cancel: \n\n")
 			leia(lingua) limpa()
-			valorLi = text.caixa_alta(text.extrair_subtexto(lingua, 0, 1))
+			valorLi = text.caixa_alta(text.extrair_subtexto(lingua, 0, 2))
 		}
 	}
-		enquanto(valorLi == "P" ou valorLi == "I" ou valorLi == "E")
+		enquanto(valorLi == "P" ou valorLi == "IN" ou valorLi == "EN")
 		}
 	}
 
@@ -286,7 +286,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 685; 
+ * @POSICAO-CURSOR = 651; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
